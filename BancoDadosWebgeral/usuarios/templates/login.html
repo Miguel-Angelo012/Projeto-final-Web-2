@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Text logar</title>
+    </head>
+
+    <body>
+        <h2>Logar na sua conta</h2>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="text" placeholder="Username..." name="username">
+            <br>
+            
+            
+            <input type="password" placeholder="Senha..." name="senha">
+            <br>
+            <input type="submit" value="logar">
+            
+        </form>
+
+    </body>
+</html>

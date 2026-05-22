@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Text Cadastrar</title>
+    </head>
+
+    <body>
+        <h2>Crie sua Conta</h2>
+        <form action="{% url 'cadastrar' %}" method="POST"> {% csrf_token %}
+
+            <input type="text" placeholder="Username..." name="username">
+            <br>
+            <input type="email" placeholder="Email..." name="email">
+            <br>
+            <input type="password" placeholder="Senha..." name="senha">
+            <br>
+            <input type="submit" value="cadastrar">
+            
+        </form>
+        <p>Já tem conta? <a>Faça Login</a></p>
+    </body>
+</html>
