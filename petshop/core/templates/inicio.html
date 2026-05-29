@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica PetShop</title>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🐶 Clínica PetShop</h1>
+
+    <nav>
+        <a href="{% url 'inicio' %}">
+            <button>inicio</button>
+        </a> |
+        <a href="{% url 'cadastro' %}">
+            <button>Cadastrar nova consulta</button>
+
+        </a>
+        <a href="{% url 'horarios' %}">
+            <button>Horarios</button>
+        </a>
+
+        <a href="{% url 'login_consultas' %}">
+            <button>Consultas Agendadas</button>
+        </a>
+
+ 
+    </nav>
+
+</header>
+
+<hr>
+
+<main>
+
+    <h2>Bem-vindo à nossa clínica!</h2>
+
+    <p>
+        Cuidamos do seu pet com carinho, segurança e profissionais especializados.
+    </p>
+
+
+    <hr>
+
+    <h2>Serviços</h2>
+
+    <ul>
+        <li>Consulta veterinária</li>
+        <li>Vacinação</li>
+        <li>Banho e tosa</li>
+        <li>Exames clínicos</li>
+        <li>Cirurgias</li>
+    </ul>
+
+    <hr>
+
+    <h2>Horário de funcionamento</h2>
+
+    <ul>
+        <li>Segunda a Sexta: 08:00 às 18:00</li>
+        <li>Sábado: 07:00 às 12:00</li>
+        <li>Domingo: Fechado</li>
+    </ul>
+
+    <hr>
+
+    <h2>Preços</h2>
+
+    <ul>
+        <li>Consulta básica: R$ 50</li>
+        <li>Vacinação: R$ 80</li>
+        <li>Banho e tosa: R$ 40</li>
+    </ul>
+
+</main>
+
+    <a href="{% url 'cadastro' %}">
+        <button>Agendar Consulta</button>
+    </a>
+
+    <a href="{% url 'login_funcionario' %}">
+        <button>Entrar como funcionario</button>
+    </a>
+
+
+<hr>
+
+<footer>
+
+    <h3>Contato</h3>
+
+    <p>📍 Maranguape - CE</p>
+    <p>📞 (85) 99999-9999</p>
+    <p>📧 clinicapetshop@email.com</p>
+
+    <p>© 2026 Clínica PetShop</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Funcionário</title>
+</head>
+<body>
+
+<h1>🔐 Login Funcionário</h1>
+
+{% if erro %}
+    <p style="color:red;">{{ erro }}</p>
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Email</label><br>
+    <input type="text" name="email"><br><br>
+
+    <label>Senha</label><br>
+    <input type="password" name="senha"><br><br>
+
+    <button type="submit">Entrar</button>
+</form>
+
+</body>
+</html>
