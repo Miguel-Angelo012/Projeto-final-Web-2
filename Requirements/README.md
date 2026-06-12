@@ -1,1 +1,3 @@
-
+## Dowloads Necessários:
+- Django
+- Pillow
