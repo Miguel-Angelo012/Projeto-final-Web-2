@@ -17,4 +17,4 @@ O projeto propõe uma agenda inteligente para pets, desenvolvida para ajudar os 
 
 ## Dowloads Necessários:
 - Django
-- 
+- Pillow
