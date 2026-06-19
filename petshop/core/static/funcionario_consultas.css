@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background: #f5f7fb;
+}
+
+/* CONTAINER */
+
+.container{
+    width:95%;
+    max-width:1300px;
+    margin:auto;
+    padding:30px;
+}
+
+/* HEADER */
+
+header{
+    background: linear-gradient(135deg,#5b21b6,#7c3aed);
+    color:white;
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+header h1{
+    font-size:32px;
+}
+
+header p{
+    margin-top:8px;
+    opacity:.9;
+}
+
+/* GRID */
+
+.consultas{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.card-header{
+    background:#6d28d9;
+    color:white;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.card-header h2{
+    font-size:22px;
+}
+
+.status{
+    background:#22c55e;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* DADOS */
+
+.dados{
+    padding:20px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #ececec;
+}
+
+.info strong{
+    color:#444;
+}
+
+.info span{
+    color:#666;
+}
+
+/* BOTÕES */
+
+.acoes{
+    padding:20px;
+}
+
+.btn-delete{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#ef4444;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-delete:hover{
+    background:#dc2626;
+}
+
+.voltar{
+    margin-top:35px;
+    text-align:center;
+}
+
+.btn-voltar{
+    background:#6d28d9;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-voltar:hover{
+    background:#5b21b6;
+}
+
+.sem-consultas{
+    width:100%;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}

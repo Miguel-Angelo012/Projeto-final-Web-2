@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Horários - Clínica PetCute</title>
+
+    <link rel="stylesheet" href="../static/horarios.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>🐶 Clínica PetCute</h1>
+
+    <nav>
+        <a href="{% url 'inicio' %}">
+            <button>Início</button>
+        </a>
+
+        <a href="{% url 'cadastro' %}">
+            <button>Cadastrar Consulta</button>
+        </a>
+
+        <a href="{% url 'horarios' %}">
+            <button>Horários</button>
+        </a>
+
+        <a href="{% url 'login_consultas' %}">
+            <button>Consultas Agendadas</button>
+        </a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <h2>📅 Horários Disponíveis</h2>
+
+    <table>
+
+        <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+        </tr>
+
+        <tr>
+            <td>Segunda-feira</td>
+            <td>07:00 - 08:00</td>
+        </tr>
+
+        <tr>
+            <td>Segunda-feira</td>
+            <td>08:00 - 09:00</td>
+        </tr>
+
+        <tr>
+            <td>Segunda-feira</td>
+            <td>09:00 - 10:00</td>
+        </tr>
+
+        <tr>
+            <td>Terça-feira</td>
+            <td>07:00 - 08:00</td>
+        </tr>
+
+        <tr>
+            <td>Terça-feira</td>
+            <td>08:00 - 09:00</td>
+        </tr>
+
+        <tr>
+            <td>Quarta-feira</td>
+            <td>08:00 - 09:00</td>
+        </tr>
+
+        <tr>
+            <td>Quinta-feira</td>
+            <td>10:00 - 11:00</td>
+        </tr>
+
+        <tr>
+            <td>Sexta-feira</td>
+            <td>14:00 - 15:00</td>
+        </tr>
+
+        <tr>
+            <td>Sábado</td>
+            <td>07:00 - 12:00</td>
+        </tr>
+
+    </table>
+
+</main>
+

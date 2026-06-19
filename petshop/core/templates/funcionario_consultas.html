@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Consultas Agendadas</title>
+
+    <link rel="stylesheet" href="../static/funcionario_consultas.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>👨‍⚕️ Painel de Consultas</h1>
+        <p>Gerenciamento de consultas veterinárias</p>
+    </header>
+
+    <section class="consultas">
+
+        {% for consulta in consultas %}
+
+        <div class="card">
+
+            <div class="card-header">
+                <h2>🐶 {{ consulta.nome_pet }}</h2>
+                <span class="status">Agendada</span>
+            </div>
+
+            <div class="dados">
+
+                <div class="info">
+                    <strong>Dono:</strong>
+                    <span>{{ consulta.nome_dono }}</span>
+                </div>
+
+                <div class="info">
+                    <strong>CPF:</strong>
+                    <span>{{ consulta.cpf }}</span>
+                </div>
+
+                <div class="info">
+                    <strong>Telefone:</strong>
+                    <span>{{ consulta.telefone }}</span>
+                </div>
+
+                <div class="info">
+                    <strong>Email:</strong>
+                    <span>{{ consulta.email }}</span>
+                </div>
+
+                <div class="info">
+                    <strong>Espécie:</strong>
+                    <span>{{ consulta.especie }}</span>
+                </div>
+
+                <div class="info">
+                    <strong>Raça:</strong>
+                    <span>{{ consulta.raca }}</span>
+                </div>
+
+                <div class="info">
+                    <strong>Atendimento:</strong>
+                    <span>{{ consulta.atendimento }}</span>
+                </div>
+
+                <div class="info">
+                    <strong>Horário:</strong>
+                    <span>{{ consulta.horario }}</span>
+                </div>
+
+            </div>
+
+            <div class="acoes">
+
+                <form method="POST" action="{% url 'deletar_consulta' consulta.id %}">
+                    {% csrf_token %}
+
+                    <button class="btn-delete" type="submit">
+                        ❌ Excluir Consulta
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div class="sem-consultas">
+            <h2>📋 Nenhuma consulta cadastrada</h2>
+        </div>
+
+        {% endfor %}
+
+    </section>
+
+    <div class="voltar">
+
+        <a href="{% url 'painel_funcionario' %}">
+            <button class="btn-voltar">
+                ← Voltar ao Painel
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
